@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><!-- 인덱스페이지 -->
 <title>Index</title>
 </head>
 <body>
