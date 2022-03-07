@@ -14,12 +14,6 @@
 
 <%@include file="../Main/Main_Top.jsp" %>
     <div id="wrap">
-    <!-- HTML템플릿(Template, Templet) 헤더 시작 -->
-
-           <%=uID %>
-    <%=authority %>
-
-<!-- HTML템플릿(Template, Templet) 헤더 끝 -->
 
         <main id="main">
             <div style="display: flex;">
@@ -28,9 +22,6 @@
             </div>
         </main>
 
-<!-- HTML템플릿(Template, Templet) 푸터 시작 -->
-        
-    <!-- HTML템플릿(Template, Templet) 푸터 끝 -->
     </div>
  <%@include file="../Main/Main_Bottom.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

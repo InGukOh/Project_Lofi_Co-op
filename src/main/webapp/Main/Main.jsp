@@ -21,9 +21,9 @@
 <!-- HTML템플릿(Template, Templet) 헤더 끝 -->
 
         <main id="main">
-            <div id="goods"></div>
-            <div id="review"></div>
-            <div id="QnA"></div>
+            <div id="goods">a</div>
+            <div id="review">b</div>
+            <div id="QnA">c</div>
         </main>
 
 <!-- HTML템플릿(Template, Templet) 푸터 시작 -->

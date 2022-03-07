@@ -12,41 +12,31 @@
 <style>
 
 img {
- max-width: 100%;
+ max-width: 800px;
 }
+
 </style>
 </head>
 <body>
 
 <%@include file="../Main/Main_Top.jsp" %>
     <div id="wrap">
-    <!-- HTML템플릿(Template, Templet) 헤더 시작 -->
-
-           <%=uID %>
-    <%=authority %>
-
-<!-- HTML템플릿(Template, Templet) 헤더 끝 -->
-
         <main id="main">
-        <h1 style="text-align: center;">21FW LOOKBOOK</h1>
+        <h1 style="text-align: center;">LOOKBOOK</h1>
         <br><br>
             <div style="text-align: center;">
-            <p><img src="../Lookbook/firstimg/1.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/2.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/3.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/4.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/5.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/6.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/7.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/8.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/9.jpg" alt=""></p>
-            <p><img src="../Lookbook/firstimg/10.jpg" alt=""></p>
+            <p><img src="../Lookbook/firstimg/1.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/2.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/3.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/4.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/5.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/6.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/7.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/8.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/9.jpg" ></p>
+            <p><img src="../Lookbook/firstimg/10.jpg" ></p>
             </div>
         </main>
-
-<!-- HTML템플릿(Template, Templet) 푸터 시작 -->
-        
-    <!-- HTML템플릿(Template, Templet) 푸터 끝 -->
     </div>
  <%@include file="../Main/Main_Bottom.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
