@@ -13,22 +13,27 @@
 <body>
 
 <%@include file="../Main/Main_Top.jsp" %>
+
     <div id="wrap">
-    <!-- HTML템플릿(Template, Templet) 헤더 시작 -->
-
-        
-
-<!-- HTML템플릿(Template, Templet) 헤더 끝 -->
 
         <main id="main">
-            <div id="goods">a</div>
-            <div id="review">b</div>
-            <div id="QnA">c</div>
+            <div id="goods">
+            	<a href="../GoodsUpload/GoodsList.jsp">
+            		<img src="Main_img/go_GoodsEd.jpg" />
+            	</a>
+            </div>
+            <div id="review">
+            	<a href="../Review/ReviewList.jsp">
+            		<img src="Main_img/go_Review.png" />
+            	</a>
+            </div>
+            <div id="QnA">
+            	<a href="../Q&A/QnAList.jsp">
+            		<img src="Main_img/go_QnA.png" />
+            	</a>
+            </div>
         </main>
 
-<!-- HTML템플릿(Template, Templet) 푸터 시작 -->
-        
-    <!-- HTML템플릿(Template, Templet) 푸터 끝 -->
     </div>
  <%@include file="../Main/Main_Bottom.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

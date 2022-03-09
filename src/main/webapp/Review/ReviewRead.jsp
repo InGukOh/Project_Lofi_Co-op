@@ -52,7 +52,7 @@
 <body>
 <%@include file="../Main/Main_Top.jsp" %>
 <div id="wrap">
-<main id="main">
+<main id="main_Review">
 <table id = "read">
 	<tbody>
 		<tr>

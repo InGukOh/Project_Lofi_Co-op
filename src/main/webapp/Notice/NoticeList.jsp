@@ -48,7 +48,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NoticeList</title>
     <link rel="stylesheet" href="../style/style_List.css">
 </head>
 <body>
@@ -59,7 +59,7 @@
 
 <div id="top"><h4>NOTICE</h4></div>
 
-<main id="main">
+<main id="main_Notice">
 <%
 vList = nMgr.getNoticeList(start, end);
 listSize = vList.size();
@@ -158,16 +158,9 @@ listSize = vList.size();
 		</tr>
 	</tbody>
 </table>
-
-</div>
-
-
 </main>
-
-
-
-
 </div>
+
 <%@include file="../Main/Main_Bottom.jsp" %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

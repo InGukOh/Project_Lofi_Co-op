@@ -23,8 +23,7 @@ public class QnAMgr {
 	
 	public DBConnectionMgr pool;
 	private static final String SAVEFOLDER
-	="C:/JSP_BigData_0616/LHG/Git/gitDownload/ReviewImg/";
-	//"C:/JSP_BigData_0616/LHG/Git/gitDownload/ReviewImg/" h.g주소
+	="C:/Users/TridentK/git/Project_Lofi_Co-op/src/main/webapp/Resource/QnAImg";
 	
 	private static String encType = "UTF-8";
 	private static int maxSize = 8*1024*1024;

@@ -23,7 +23,7 @@ public class ReviewMgr {
 	
 	public DBConnectionMgr pool;
 	private static final String SAVEFOLDER 
-	 = "C:/JSP_BigData_0616/LHG/Git/gitDownload/Project_Lofi/Project_Lofi_Co-op/src/main/webapp/Resource/ReviewImg/";
+	 = "C:/Users/TridentK/git/Project_Lofi_Co-op/src/main/webapp/Resource/ReviewImg";
 	//항상바꿔야함 커밋할때마다
 	private static String encType = "UTF-8";
 	private static int maxSize = 8*1024*1024;

@@ -66,7 +66,7 @@
 <div id="wrap">
 
        
-<main id="main">
+<main id="main_QnA">
 <div id="top"><h4>QnA</h4></div>
 
 
@@ -106,16 +106,17 @@ listSize = vList.size();
   	<tr id="listNum" class="prnTr"  onclick="QnARead('<%=num%>', '<%=nowPage%>')">
 			<td class="List">
 					<% if (depth == 0) out.print(num);  %>
+					여기1여기1여기1여기1여기1여기1여기1여기1여기1
 			</td> 
 			<td class="List">
-					<% 
-								 if (depth > 0) {
-									 for(int blank=0; blank<depth; blank++) {
-										 out.print("Re: ");
-									 }
-								 } 
-								out.print(subject);
-					%>
+			<%
+				if (depth > 0) {
+					for(int blank=0; blank<depth; blank++) {
+						out.print("Re: ");
+					}
+				} 
+				out.print(subject);
+			%>
 			</td>
 			<td class="List"><%= uName %></td>
 		</tr>

@@ -59,7 +59,7 @@
 <%@include file="../Main/Main_Top.jsp" %>
 <div id="wrap">
 
-<main id="main">
+<main id="main_Review">
 
 <div id="top"><h4>REVIEW</h4></div>
 
@@ -109,7 +109,7 @@ listSize = vList.size();
 			%>
 			<%=filename %>
 			</td>
-			<td class="List" id="listSub"><%= subject %>
+			<td class="List" id="listSub"><a href="ReviewRead.jsp?num=<%=num%>"><%= subject %></a>
 			<br><br>
 			<input type="text" placeholder="<%=content%>" readonly id="listContent" maxlength="20">
 			</td>

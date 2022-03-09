@@ -52,15 +52,15 @@
 <%@include file="../Main/Main_Top.jsp" %>
 <div id="wrap">
 
-<main id="main">
+<main id="main_QnA">
 
 <table id = "read">
 	<tbody>
 		<tr>
-			<td class="rContent"><span>이름  <%=uName %></span></td>
+			<td class="rContent"><span>작성자 : <%=uName %></span></td>
 		</tr>
 		<tr>
-			<td class="rContent"><span>제목  <%=subject %></span></td>
+			<td class="rContent"><span>제목 : <%=subject %></span></td>
 		</tr>
 		<tr>
 			<td>

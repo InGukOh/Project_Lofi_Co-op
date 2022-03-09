@@ -13,6 +13,7 @@
 <body>
 
 <%@include file="../Main/Main_Top.jsp" %>
+
     <div id="wrap">
 
         <main id="main">
@@ -23,7 +24,9 @@
         </main>
 
     </div>
+    
  <%@include file="../Main/Main_Bottom.jsp" %>
+ 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../script/jquery-3.6.0.min.js"></script>
 <script src="../script/script_main.js"></script>
