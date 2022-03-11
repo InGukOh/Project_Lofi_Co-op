@@ -42,7 +42,7 @@
     }
     
     totalRecord = qMgr.getTotalCount(keyField, keyWord);
-    
+     
     totalPage = (int)Math.ceil((double)totalRecord/numPerPage);
     nowBlock = (int)Math.ceil((double)nowPage/pagePerBlock);
     totalBlock = (int)Math.ceil((double)totalPage/pagePerBlock);

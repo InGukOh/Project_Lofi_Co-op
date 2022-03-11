@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="../style/style_HeaderFooter.css">
 </head>
 <body>
-
 <% // 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크 
     String uID = null;
     if(session.getAttribute("uID") != null){
@@ -63,7 +62,7 @@
 			<% } 
             else if(uID !=null && authority.equals("admin")){
 			%>
-			<div id="admin_op">
+			<div id="admin_op"> 
 				<ul><a href="../Account/LogoutAction.jsp">LogOut</a></ul>
 				<ul><a href="../GoodsUpload/OrderShow.jsp">OrderManagement</a></ul>
 				<ul><a href="../GoodsUpload/GoodsUpload.jsp">GoodsUpload</a></ul>

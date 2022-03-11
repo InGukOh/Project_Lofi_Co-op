@@ -116,9 +116,11 @@ li{
 	margin: 10px;
 	cursor: pointer;
 }
+
 #nowView{
 	color: blue;
 }
+
 #writeBtn{
 	position : relative;
 	left: 44%;

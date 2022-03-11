@@ -7,4 +7,3 @@
 rMgr.insertReview(request);
 response.sendRedirect("ReviewList.jsp");
 %>
- 

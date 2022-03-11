@@ -76,9 +76,9 @@
 	</tbody>
 </table>
 
-<button type="button" id="listBtn" class="reviewBtn">리스트</button>
-<button type="button" id="modBtn"  class="reviewBtn">수정</button>
-<button type="button" id="delBtn"  class="reviewBtn">삭제</button>
+	<button type="button" id="listBtn" class="reviewBtn">리스트</button>
+	<button type="button" id="modBtn"  class="reviewBtn">수정</button>
+	<button type="button" id="delBtn"  class="reviewBtn">삭제</button>
 
 			<input type="hidden" name="nowPage" value="<%=nowPage%>" id="nowPage">
 			<input type="hidden" name="num" value="<%=num%>" id="num">

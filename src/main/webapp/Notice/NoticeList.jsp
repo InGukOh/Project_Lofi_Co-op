@@ -54,9 +54,6 @@
 <body>
 <%@include file="../Main/Main_Top.jsp" %>
 <div id="wrap">
-
-
-
 <div id="top"><h4>NOTICE</h4></div>
 
 <main id="main_Notice">

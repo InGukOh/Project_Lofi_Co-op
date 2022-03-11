@@ -34,9 +34,7 @@
     	fileSize /= 1024;
     	fUnit = "KBytes";
     }
-    
     String ip = bean.getIp();
-    
     session.setAttribute("bean", bean);
     %>
 <!DOCTYPE html>
