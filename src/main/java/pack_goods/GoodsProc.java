@@ -316,9 +316,12 @@ public class GoodsProc {
 
 		try {
 			objConn = pool.getConnection();   // DB연동구문 사용
-
 			if(keyWord.equals("null") || keyWord.equals("")) {
-				sql = "select * from goodsInfo where goodsLike = 1 order by goodsnum desc limit ?, ?";
+				if(!keyField.equals("")) {
+					sql = "select * from goodsInfo where goodsType ='"+keyField+"' and goodsLike = 1 order by goodsnum desc limit ?, ?";
+				}else {
+					sql = "select * from goodsInfo where goodsLike = 1 order by goodsnum desc limit ?, ?";
+				}
 				objPstmt = objConn.prepareStatement(sql);
 				objPstmt.setInt(1, start);
 				objPstmt.setInt(2, end);
@@ -330,11 +333,13 @@ public class GoodsProc {
 					objPstmt.setInt(2, start);
 					objPstmt.setInt(3, end);
 				} else {
-					sql = "select*from goodsInfo where goodsType = '"+keyField+"' and goodsName like ? and goodsLike = 1 order by goodsNum desc limit ?,?";
+					sql = "select * from "
+							+ "(select * from goodsInfo where goodsType = ? and goodsName like concat(?)order by goodsNum desc) as T1 limit ?,?";
 					objPstmt = objConn.prepareStatement(sql);
-					objPstmt.setString(1, "%"+keyWord+"%");
-					objPstmt.setInt(2, start);
-					objPstmt.setInt(3, end);
+					objPstmt.setString(1, keyField);
+					objPstmt.setString(2, "%"+keyWord+"%");
+					objPstmt.setInt(3, start);
+					objPstmt.setInt(4, end);
 				}
 			}
 			

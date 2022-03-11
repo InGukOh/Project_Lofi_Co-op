@@ -151,15 +151,6 @@ select*from tblReview;
 select*from tblQnA;
 select*from tblNotice;
 
-
-select count(*) from goodsInfo where goodsType = '패딩';
-select count(*) from tblNotice;
-select * from tblNotice order by num desc limit ?,?;
-insert into tblNotice(uName, subject, content, regDate, ip) values(1, '2', '3', now(), 10);
-select max(num) from tblNotice;
-select*from tblNotice order by num desc limit 0,5;
-select count(*) from tblNotice;
-
 -- --///////////// 명령어 /////////////--  --
 select * from goodsInfo where goodsLike = 1 order by goodsnum desc limit 0,20;
 select count(*) from goodsInfo where goodsName like '%겨울%' ;
@@ -178,7 +169,10 @@ select * from userOrder where uID ='user1231' and addDate = '2022-01-14 18:31:03
 delete from userBasket where uID = 'user1231' and addDate = '2022-01-17 18:15:39' and goodsName ='여름옷 시리즈~_2201140900' and Scount=0  and Mcount= 0 and Lcount= 0 and XLcount= 1 and allcount= 1 and calcRes= 80000 and ordered = 0;
 delete from userBasket where uID='user1231' and goodsName ='여름옷 시리즈~_2201140900' and addDate = '2022-01-17 18:15:39';
 insert into userBasket value('user1231',  '2022-01-17 18:15:39',  '여름옷 시리즈~_2201140900',  0, 0,  0,  1,  1,  80000, 0);
-
+select * from goodsInfo where goodsType= '패딩';
+select * from (
+	select * from goodsInfo where goodsType = '패딩' and goodsName like concat('%봄%')order by goodsNum desc) as T1 limit 0,10;
+select * from goodsInfo where goodsType ="패딩" and goodsLike = 1 order by goodsnum desc limit 0, 10;
 -- --////////////// 업데이트 //////////////--  -- 
 set SQL_SAFE_UPDATES = 0;
 

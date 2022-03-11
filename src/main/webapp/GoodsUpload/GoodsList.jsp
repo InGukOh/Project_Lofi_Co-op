@@ -74,7 +74,6 @@ totalBlock = (int)Math.ceil((double)totalPage/pagePerBlock);
 <%@include file="../Main/Main_Top.jsp" %>
 
 <div id="wrap" >
-
 	<div id="searchArea" class="flex-container">
 
 		<form name = "searchFrm" id="searchFrm">

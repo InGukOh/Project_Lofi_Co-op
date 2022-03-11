@@ -23,10 +23,12 @@ li{
 }
 
 #nav1{
-    padding-left: 50px;
+    text-align:center;
     flex: 1;
     justify-content: space-around;
     margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .goods1{
     display: none;
@@ -84,4 +86,47 @@ height: 100%;
 }
 #footer{
 	padding-top: 30px;
+}
+nav#nav1{
+	border: 1px solid #000;
+	width: 800px;
+}
+nav#nav2{
+	border: 1px solid #000;
+	width: 800px;
+}
+div#nonLog{
+	/* border: 1px solid #000; */
+	width:300px;
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+div#user_op{
+	/* border: 1px solid #000; */
+	width:300px;
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+	font-size: 20px;
+}
+div#admin_op{
+	/* border: 1px solid #000; */
+	width:500px;
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+	font-size: 20px;
+}
+p#logIn_notice{
+	border: 3px solid #5d5d5d;
+	border-radius:10px;
+	margin:0px auto;
+	width: 320px;
+	max-height: 50px;
+	line-height: 45px;
+	font-weight: bold;
+	text-align: center;
 }
