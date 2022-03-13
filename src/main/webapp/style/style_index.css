@@ -44,11 +44,15 @@ div#QnA{
 	background-color:#909090;
 	text-align: center;
 }
-
+img#logoImg{
+	/* border: 1px solid #f00; */
+	width: 114px;
+	height: 70px;
+}
 img{
 	margin:10px auto;
 	/* border: 1px solid #000; */
 	border-radius:15px;
-	max-width:700px;
-	max-height: 200px;
+	width:700px;
+	height: 200px;
 }

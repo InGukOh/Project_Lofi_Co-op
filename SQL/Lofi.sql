@@ -175,7 +175,7 @@ select * from (
 select * from goodsInfo where goodsType ="패딩" and goodsLike = 1 order by goodsnum desc limit 0, 10;
 -- --////////////// 업데이트 //////////////--  -- 
 set SQL_SAFE_UPDATES = 0;
-
+update goodsInfo set goodsLike = 1 where goodsLike = 0;
 
 
 -- --//////////////!!!드랍!!!///////////////--  -- 

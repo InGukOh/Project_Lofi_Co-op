@@ -136,7 +136,7 @@ totalBlock = (int)Math.ceil((double)totalPage/pagePerBlock);
 					<img id="ListThumb" src="../Resource/GoodsImg/<%=tloc %>/thumb/<%=thumbnail %>"/>
 				</a>
 		<% 	}else{ %>
-				<img src="../Resource/GoodsImg/GoodsReady/goods_ready.jpg" alt="상품 준비중"><br>
+				<img src="../Resource/GoodsImg/GoodsReady/goods_ready.jpg" id="no_goods" alt="상품 준비중" ><br>
 		<% 	} %>
 		 	</div>
 			<table id="ListTable">

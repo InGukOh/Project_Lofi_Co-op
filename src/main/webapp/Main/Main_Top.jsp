@@ -28,7 +28,7 @@
         
             
             <div id="logo">
-                <a href="../Main/Main.jsp"><img src="../Main/mainlogo.PNG" alt=""></a>
+                <a href="../Main/Main.jsp"><img src="../Main/mainlogo.PNG" id="logoImg"></a>
 
             </div>
             <nav id="nav1" class="flex-container">
@@ -62,13 +62,16 @@
 			<% } 
             else if(uID !=null && authority.equals("admin")){
 			%>
-			<div id="admin_op"> 
-				<ul><a href="../Account/LogoutAction.jsp">LogOut</a></ul>
-				<ul><a href="../GoodsUpload/OrderShow.jsp">OrderManagement</a></ul>
-				<ul><a href="../GoodsUpload/GoodsUpload.jsp">GoodsUpload</a></ul>
-			</div>
-			<div id="AL">
-				<p id="logIn_notice">안녕하세요 <%=uID %>님! 관리자 권한입니다!</p>
+			<div id="admin">
+				<div id="admin_op"> 
+					<ul><a href="../Account/LogoutAction.jsp">LogOut</a></ul>
+					<ul><a href="../GoodsUpload/OrderShow.jsp">OrderManagement</a></ul>
+					<ul><a href="../GoodsUpload/GoodsUpload.jsp">GoodsUpload</a></ul>
+				</div>
+				
+				<div id="AL">
+					<p id="logIn_notice">안녕하세요 <%=uID %>님! 관리자 권한입니다!</p>
+				</div>
 			</div>
 			<% } %>
             </nav>

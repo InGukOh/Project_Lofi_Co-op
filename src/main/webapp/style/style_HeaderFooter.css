@@ -22,6 +22,7 @@ li{
     flex: 1;
 }
 
+
 #nav1{
     text-align:center;
     flex: 1;
@@ -90,11 +91,11 @@ height: 100%;
 }
 
 nav#nav1{
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 	width: 800px;
 }
 nav#nav2{
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 	width: 800px;
 }
 div#nonLog{
@@ -121,6 +122,9 @@ div#admin_op{
 	justify-content: space-around;
 	font-weight: bold;
 	font-size: 20px;
+}
+div#AL{
+	margin-top: 20px;
 }
 p#logIn_notice{
 	border: 3px solid #5d5d5d;
