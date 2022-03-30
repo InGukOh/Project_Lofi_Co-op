@@ -143,9 +143,6 @@ while (objRs.next()) {
 	user.setPhoneNum2(objRs.getString("PhoneNum2"));
 	user.setPhoneNum3(objRs.getString("PhoneNum3"));
 		 
-	 // user.setBirthYear(objRs.getInt("BirthYear"));
-	  //user.setBirthMonth(objRs.getInt("BirthMonth"));
-	  //user.setBirthDay(objRs.getInt("BirthDay"));
 	  user.setuName(objRs.getString("uName"));
 
 
@@ -183,7 +180,7 @@ try {
 objConn = pool.getConnection();
 
 sql = "update userInfo set ";
-sql += "uPw=?, uName=?, uZip=?,  uAddr1=?, uAddr2=?, uEmail=?"; //PhoneNum1=?,PhoneNum2=?, PhoneNum3=? 
+sql += "uPw=?, uName=?, uZip=?,  uAddr1=?, uAddr2=?, uEmail=?"; 
 sql += "where uID = ?";
 objPstmt = objConn.prepareStatement(sql);
 objPstmt.setString(1, uPw);
@@ -192,10 +189,6 @@ objPstmt.setString(3, uZip);
 objPstmt.setString(4, uAddr1);
 objPstmt.setString(5, uAddr2);
 objPstmt.setString(6, uEmail);
-/*
- * objPstmt.setInt(7, PhoneNum1); objPstmt.setInt(8, PhoneNum2);
- * objPstmt.setInt(9, PhoneNum3);
- */
 objPstmt.setString(7, uID);
 
 
@@ -256,58 +249,7 @@ return flag;
 ///////////////////////////////////////////////////////////////////	
 //////////////Member_Del.jsp 회원탈퇴 끝 ////////////////////
 ///////////////////////////////////////////////////////////////////
-	/*
-	//////////////////////////////// 회원탈퇴 ////////////////////////////////
-	public User getUser(String uID) {
-		String sql = "select * from userInfo where uID = ?";
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, uID);
-			rs1 = pstmt.executeQuery();
-			if(rs1.next()) {
-				User userC = new User();
-				userC.setuID(rs1.getString(1));
-				return userC;
-			}
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 	
-	public int CMS(User user) {
-		  String sql = "delete from userInfo where uID=?";
-		  try {
-		    pstmt1 = conn.prepareStatement(sql);
-		    pstmt1.setString(1, user.getuID());
-
-		    return pstmt1.executeUpdate();
-		  }catch (Exception e) {
-		 	e.printStackTrace();
-		  }
-		  return -1;
-		}
-	
-	////////////////////////////////회원 정보 수정용 확인 ////////////////////////////////
-	public int UserInfo(String uID, String uPw) {
-		String sql = "select uPw from user where uID = ?";
-		try {
-			pstmt1 = conn.prepareStatement(sql); //sql쿼리문을 대기 시킨다
-			pstmt1.setString(1, uID); //첫번째 '?'에 매개변수로 받아온 'uID'를 대입
-			rs1 = pstmt1.executeQuery(); //쿼리를 실행한 결과를 rs1에 저장
-			if(rs1.next()) {
-				if(rs1.getString(1).equals(uPw)) {
-					return 1; //로그인 성공
-					}else
-						return 0; //비밀번호 틀림
-				}
-			return -1; //아이디 없음
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		return -2; //오류
-	}
-	*/
 	//지갑 충전 시작
 public int money(String uID, int Wallet) {
 	Connection					objConn		=	null;
