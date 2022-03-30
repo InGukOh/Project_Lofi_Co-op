@@ -138,6 +138,7 @@ public class AdminOptionProc {
 	}
 			// 구매리스트 보기 끝 //
 		
+	// 구매 상품 배송 정보 시작 // 
 	public int changeState(int changeState , String info) {
 			
 		Connection					objConn		=	null;
@@ -171,4 +172,5 @@ public class AdminOptionProc {
 		}
 		return 0;
 	}
+	// 구매 상품 배송 정보 끝 // 
 }

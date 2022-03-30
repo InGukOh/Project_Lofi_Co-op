@@ -110,57 +110,57 @@ public class UserDAO {
 /////// Member_Mod.jsp 회원정보 수정 입력폼 시작 /////////////
 ///////////////////////////////////////////////////////////////////
 
-public Vector modifyMember(String uID) {
-
-Vector<User> vList = new Vector<>();
-
-Connection objConn = null;
-PreparedStatement objPstmt = null;
-ResultSet objRs = null;
-
-String sql = null;
-
-try {
-objConn = pool.getConnection();
-sql = "select * from userInfo where uID=?";
-objPstmt = objConn.prepareStatement(sql);
-objPstmt.setString(1, uID);
-
-objRs = objPstmt.executeQuery();
-
-if (objRs != null) {
-while (objRs.next()) {
-
-	User user = new User();
-	  user.setuID(objRs.getString("uID"));
-	  user.setuPw(objRs.getString("uPw"));
-	  user.setuZip(objRs.getString("uZip"));
-	  user.setuAddr1(objRs.getString("uAddr1"));
-	  user.setuAddr2(objRs.getString("uAddr2"));
-	  user.setuEmail(objRs.getString("uEmail"));
-	
-	user.setPhoneNum1(objRs.getString("PhoneNum1"));
-	user.setPhoneNum2(objRs.getString("PhoneNum2"));
-	user.setPhoneNum3(objRs.getString("PhoneNum3"));
-		 
-	  user.setuName(objRs.getString("uName"));
-
-
-vList.add(user);
-
-}
-}
-
-} catch (Exception e) {
-
-System.out.println("SQL 이슈 : " + e.getMessage());
-
-} finally {
-pool.freeConnection(objConn, objPstmt, objRs);
-}
-
-return vList;
-}
+		public Vector modifyMember(String uID) {
+		
+		Vector<User> vList = new Vector<>();
+		
+		Connection objConn = null;
+		PreparedStatement objPstmt = null;
+		ResultSet objRs = null;
+		
+		String sql = null;
+		
+		try {
+		objConn = pool.getConnection();
+		sql = "select * from userInfo where uID=?";
+		objPstmt = objConn.prepareStatement(sql);
+		objPstmt.setString(1, uID);
+		
+		objRs = objPstmt.executeQuery();
+		
+		if (objRs != null) {
+		while (objRs.next()) {
+		
+			User user = new User();
+			  user.setuID(objRs.getString("uID"));
+			  user.setuPw(objRs.getString("uPw"));
+			  user.setuZip(objRs.getString("uZip"));
+			  user.setuAddr1(objRs.getString("uAddr1"));
+			  user.setuAddr2(objRs.getString("uAddr2"));
+			  user.setuEmail(objRs.getString("uEmail"));
+			
+			user.setPhoneNum1(objRs.getString("PhoneNum1"));
+			user.setPhoneNum2(objRs.getString("PhoneNum2"));
+			user.setPhoneNum3(objRs.getString("PhoneNum3"));
+				 
+			  user.setuName(objRs.getString("uName"));
+		
+		
+		vList.add(user);
+		
+		}
+		}
+		
+		} catch (Exception e) {
+		
+		System.out.println("SQL 이슈 : " + e.getMessage());
+		
+		} finally {
+		pool.freeConnection(objConn, objPstmt, objRs);
+		}
+		
+		return vList;
+		}
 
 ///////////////////////////////////////////////////////////////////	
 /////// Member_Mod.jsp 회원정보 수정 입력폼 끝 /////////////
@@ -169,46 +169,43 @@ return vList;
 ///////////////////////////////////////////////////////////////////	
 /////// Member_ModProc.jsp 회원정보 수정 시작 /////////////
 ///////////////////////////////////////////////////////////////////	
-public boolean modifyMember(String uPw, String uName, String uZip,String uAddr1, String uAddr2,String uEmail,String uID) {
+		public boolean modifyMember(String uPw, String uName, String uZip,String uAddr1, String uAddr2,String uEmail,String uID) {
+		
+			Connection objConn = null;
+			PreparedStatement objPstmt = null;
+			String sql = null;
+			boolean flag = false;
+			
+			try {
+				objConn = pool.getConnection();
+				
+				sql = "update userInfo set ";
+				sql += "uPw=?, uName=?, uZip=?,  uAddr1=?, uAddr2=?, uEmail=?"; 
+				sql += "where uID = ?";
+				objPstmt = objConn.prepareStatement(sql);
+				objPstmt.setString(1, uPw);
+				objPstmt.setString(2, uName);
+				objPstmt.setString(3, uZip);
+				objPstmt.setString(4, uAddr1);
+				objPstmt.setString(5, uAddr2);
+				objPstmt.setString(6, uEmail);
+				objPstmt.setString(7, uID);
 
-Connection objConn = null;
-PreparedStatement objPstmt = null;
-String sql = null;
-boolean flag = false;
-
-try {
-objConn = pool.getConnection();
-
-sql = "update userInfo set ";
-sql += "uPw=?, uName=?, uZip=?,  uAddr1=?, uAddr2=?, uEmail=?"; 
-sql += "where uID = ?";
-objPstmt = objConn.prepareStatement(sql);
-objPstmt.setString(1, uPw);
-objPstmt.setString(2, uName);
-objPstmt.setString(3, uZip);
-objPstmt.setString(4, uAddr1);
-objPstmt.setString(5, uAddr2);
-objPstmt.setString(6, uEmail);
-objPstmt.setString(7, uID);
-
-
-
-
-int cnt = objPstmt.executeUpdate();
-if (cnt > 0)
-flag = true; // update가 정상실행되었음을 의미
-
-} catch (Exception e) {
-
-System.out.println("SQL 이슈 : " + e.getMessage());
-
-} finally {
-pool.freeConnection(objConn, objPstmt);
-}
-
-return flag;
-}
-
+				int cnt = objPstmt.executeUpdate();
+				if (cnt > 0)
+				flag = true; // update가 정상실행되었음을 의미
+				
+			} catch (Exception e) {
+			
+			System.out.println("SQL 이슈 : " + e.getMessage());
+			
+			} finally {
+			pool.freeConnection(objConn, objPstmt);
+			}
+		
+		return flag;
+		}
+		
 
 ///////////////////////////////////////////////////////////////////	
 /////// Member_ModProc.jsp 회원정보 수정 끝 /////////////
@@ -217,83 +214,55 @@ return flag;
 ///////////////////////////////////////////////////////////////////	
 //////////////Member_Del.jsp 회원탈퇴 시작 ////////////////////
 ///////////////////////////////////////////////////////////////////	
-public boolean deleteMember(String uID) {
-
-Connection objConn = null;
-PreparedStatement objPstmt = null;
-String sql = null;
-boolean flag = false;
-
-try {
-objConn = pool.getConnection();
-
-sql = "delete from userInfo where uID = ?";
-objPstmt = objConn.prepareStatement(sql);
-objPstmt.setString(1, uID);
-
-int cnt = objPstmt.executeUpdate();
-if (cnt > 0)
-flag = true; // update가 정상실행되었음을 의미
-
-} catch (Exception e) {
-
-System.out.println("SQL 이슈 : " + e.getMessage());
-
-} finally {
-pool.freeConnection(objConn, objPstmt);
-}
-
-return flag;
-}
+		public boolean deleteMember(String uID) {
+		
+			Connection objConn = null;
+			PreparedStatement objPstmt = null;
+			String sql = null;
+			boolean flag = false;
+			
+			try {
+				objConn = pool.getConnection();
+				
+				sql = "delete from userInfo where uID = ?";
+				objPstmt = objConn.prepareStatement(sql);
+				objPstmt.setString(1, uID);
+				
+				int cnt = objPstmt.executeUpdate();
+				if (cnt > 0)
+				flag = true; // update가 정상실행되었음을 의미
+				
+			} catch (Exception e) {
+				
+				System.out.println("SQL 이슈 : " + e.getMessage());
+				
+			} finally {
+				pool.freeConnection(objConn, objPstmt);
+			}
+				
+				return flag;
+			}
 
 ///////////////////////////////////////////////////////////////////	
 //////////////Member_Del.jsp 회원탈퇴 끝 ////////////////////
 ///////////////////////////////////////////////////////////////////
 	
 	//지갑 충전 시작
-public int money(String uID, int Wallet) {
-	Connection					objConn		=	null;
-	PreparedStatement 		objPstmt 		= 	null;
-	ResultSet						objRs			=	null;
-	String							sql 				=	null;
-
-	System.out.println("==== "+uID + " 가 " + Wallet +" 원 충전 ==== \n");
-	System.out.println();
-	try {
-		objConn = pool.getConnection();
-		sql= "update userInfo set wallet = wallet + ? where uID = ?";
-		objPstmt = objConn.prepareStatement(sql);
-		objPstmt.setInt(1, Wallet);
-		objPstmt.setString(2,uID);
-		return objPstmt.executeUpdate();
-		
-	} catch (SQLException e) {
-		System.out.println("SQL 이슈 : " + e.getMessage());
-	} catch (Exception e) {
-		System.out.println("DB 접속이슈 : " + e.getMessage());
-	} finally {
-		pool.freeConnection(objConn, objPstmt, objRs);
-	}
-	return -1;
-}
-	//지갑확인 시작
-	public int Wallet(String uID) {
+	public int money(String uID, int Wallet) {
 		Connection					objConn		=	null;
 		PreparedStatement 		objPstmt 		= 	null;
 		ResultSet						objRs			=	null;
 		String							sql 				=	null;
-		
-		
+	
+		System.out.println("==== "+uID + " 가 " + Wallet +" 원 충전 ==== \n");
+		System.out.println();
 		try {
 			objConn = pool.getConnection();
-			
-			sql= "select Wallet from userInfo where uID = ?";
+			sql= "update userInfo set wallet = wallet + ? where uID = ?";
 			objPstmt = objConn.prepareStatement(sql);
-			objPstmt.setString(1, uID);
-			objRs = objPstmt.executeQuery();
-			if(objRs.next()) {
-				return objRs.getInt(1);
-			}
+			objPstmt.setInt(1, Wallet);
+			objPstmt.setString(2,uID);
+			return objPstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 			System.out.println("SQL 이슈 : " + e.getMessage());
@@ -304,6 +273,34 @@ public int money(String uID, int Wallet) {
 		}
 		return -1;
 	}
+		//지갑확인 시작
+		public int Wallet(String uID) {
+			Connection					objConn		=	null;
+			PreparedStatement 		objPstmt 		= 	null;
+			ResultSet						objRs			=	null;
+			String							sql 				=	null;
+			
+			
+			try {
+				objConn = pool.getConnection();
+				
+				sql= "select Wallet from userInfo where uID = ?";
+				objPstmt = objConn.prepareStatement(sql);
+				objPstmt.setString(1, uID);
+				objRs = objPstmt.executeQuery();
+				if(objRs.next()) {
+					return objRs.getInt(1);
+				}
+				
+			} catch (SQLException e) {
+				System.out.println("SQL 이슈 : " + e.getMessage());
+			} catch (Exception e) {
+				System.out.println("DB 접속이슈 : " + e.getMessage());
+			} finally {
+				pool.freeConnection(objConn, objPstmt, objRs);
+			}
+			return -1;
+		}
 	//지갑확인 끝
 	
 	//결제 시작 

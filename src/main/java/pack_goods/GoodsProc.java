@@ -105,7 +105,7 @@ public class GoodsProc {
 					
 					Byte = goodsName.getBytes();
 					encoName = encoder.encodeToString(Byte)+add;
-					encoName = encoName.replaceAll("/", "\\{");
+					encoName = encoName.replaceAll("/", "\\{"); 
 					goodsFolder = SAVEFOLDER + (encoName);
 					File goodsFile = new File(goodsFolder);
 					if(!goodsFile.exists()){
