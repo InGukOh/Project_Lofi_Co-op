@@ -20,6 +20,7 @@ public class User {
 	private int birthDay;
 	private String recommend;
 	private String uName;
+	
 	public String getuName() {
 		return uName;
 	}
